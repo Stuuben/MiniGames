@@ -32,10 +32,6 @@ export const Navbar = () => {
           <div className={burger_class}></div>
           <div className={burger_class}></div>
         </div>
-
-        {/*  <div className="loggo-mobile"></div>
-
-        <div className="adjuster"></div> */}
       </nav>
 
       <div className={menu_class}>
