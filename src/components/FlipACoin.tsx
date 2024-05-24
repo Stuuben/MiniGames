@@ -21,8 +21,16 @@ export const FlipACoin = (props: IFlipACoinProps) => {
   console.log("gamestarted", props.gameStarted);
 
   useEffect(() => {
+    const storedStreek = localStorage.getItem("highestStreek");
+    if (storedStreek !== null) {
+      setStreek(parseInt(storedStreek));
+    }
+  }, []);
+
+  useEffect(() => {
     if (wins > streek) {
       setStreek(streek + 1);
+      localStorage.setItem("highestStreek", JSON.stringify(streek + 1));
     }
   }, [wins, streek]);
 
